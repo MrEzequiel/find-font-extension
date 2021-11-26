@@ -6,8 +6,16 @@
     {
       "matches": ["https://*/*"],
       "css": ["style.css"],
-      "js": ["main.js"]
+      "js": ["main.js"],
+      "match_about_blank": false
     }
   ],
-  "manifest_version": 3
+  "background": {
+    "service_worker": "background.js"
+  },
+  "manifest_version": 3,
+  "action": {},
+  "permissions": [
+    "activeTab"
+  ]
 }

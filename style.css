@@ -1,7 +1,3 @@
-body {
-  cursor: crosshair;
-}
-
 .__find-font__ {
   font: 400 16px Arial, Helvetica, sans-serif;
   color: #000;
@@ -50,7 +46,19 @@ body {
   word-break: break-all;
 }
 
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .__font-description__ {
+  animation: show-up 500ms ease-in-out forwards;
   cursor: default;
   font: 400 16px Arial, Helvetica, sans-serif;
   color: #000;
@@ -117,6 +125,7 @@ body {
 .__font-description__ .infos dd {
   color: #000;
   font: 600 16px Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
   font-weight: bold;
   margin: 5px 0 0 0;
 }
